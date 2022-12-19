@@ -1,0 +1,9 @@
+<files connectdb.php>
+order allow,deny
+deny from all
+</files>
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>

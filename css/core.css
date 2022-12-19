@@ -1,0 +1,215 @@
+/*!
+ * Сетка от bootstrap
+ * Bootstrap v5.0.1 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+*{margin: 0;padding: 0;}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-size: 0.938rem; /*14px*/
+  font-weight: 400;
+  line-height: 1.5;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;  
+}
+li{list-style-type: none;}
+a{text-decoration: none;}
+label {display: inline-block;}
+button {border-radius: 0;}
+button:focus:not(:focus-visible) {outline: 0;}
+input,
+button{
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button{text-transform: none;}
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked)
+{
+  position: absolute;
+  left: -9999px;
+}
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label
+{
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before
+{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+/*
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before
+{
+    border-radius: 2px;
+}
+*/
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after
+{
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    left: 2px;
+    top: 3px;
+    width: 14px;
+    height: 8px;
+    /*border-radius: 1px;*/
+    border-left: 4px solid #cf7f08;
+    border-bottom: 4px solid #cf7f08;
+    -webkit-transform: rotate(305deg);
+    -moz-transform: rotate(305deg);
+    -o-transform: rotate(305deg);
+    -ms-transform: rotate(305deg);
+    transform: rotate(305deg);
+}
+input[type="checkbox"]:not(:checked) + label:after
+{
+    opacity: 0;
+}
+input[type="checkbox"]:checked + label:after
+{
+    opacity: 1;
+}
+code {
+	font-family: var(--bs-font-monospace);
+  font-size: 0.875em;
+  color: #d63384;
+  word-wrap: break-word;
+  direction: ltr /* rtl:ignore */;
+  unicode-bidi: bidi-override;  
+}
+table {
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+}
+tr, td, th{
+  border: 1px solid #b8b8b8;
+}
+/********************************************************************************/
+.container{
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {max-width: 540px;}
+}
+@media (min-width: 768px) {
+  .container {max-width: 720px;}
+}
+@media (min-width: 992px) {
+  .container {
+	  max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+  .container {max-width: 1140px;}
+}
+@media (min-width: 1400px) {
+  .container {max-width: 1320px;}
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+@media (min-width: 992px){
+  .col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  .col-lg-6{
+  flex: 0 0 auto;
+  width: 50%; 
+  }
+  .col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }  
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: #6c757d;
+  content: "/";
+}
+.breadcrumb-item.active {
+  color: #6c757d;
+}
